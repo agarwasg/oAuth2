@@ -1,0 +1,116 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.background {
+		background-color: #fff;
+	}
+	
+	.scrollBox {
+		background-color: #fff;
+		display: block;
+		position: relative;
+		max-height: 60%;
+		overflow:scroll;
+		margin-top: 20px;
+		padding-left: 20px;
+		
+		
+	}
+	
+	.decoratorPanel {
+		display: block;
+		padding: 6px 18px 6px 7px;
+		background-color: #fAfAfA;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	
+	.authorizeButton {
+		-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+		-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+		box-shadow: 0px 1px 0px 0px #f0f7fa;
+		background-color: #3478ed;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		border-radius: 6px;
+		border: 1px solid #057fd0;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-family: arial;
+		font-size: 17px;
+		font-weight: bold;
+		padding: 10px 27px;
+		text-decoration: none;
+		text-shadow: 0px -1px 0px #5b6178;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+	}
+	
+	.authorizeButton:hover {
+		background-color: #019ad2;
+	}
+	
+	.authorizeButton:active {
+		position: relative;
+		top: 1px;
+	}
+	
+	}
+	.linkStyle {
+		display: block;
+		padding: 6px 18px 18px 7px;
+		position: relative;
+		color: #333;
+		font-size: 13px;
+		font-weight: normal;
+		cursor: pointer;
+	}
+	</ui:style>
+	<g:FlowPanel styleName="{style.background}">
+
+		<g:DecoratorPanel styleName="{style.decoratorPanel}">
+			<g:HTML>
+				<b>Select the scope</b>
+				for the APIs you would like to access or input your own OAuth scopes
+				below. Then click the
+				<b> "Authorize APIs" </b>
+				button.
+			</g:HTML>
+
+		</g:DecoratorPanel>
+
+		<g:ScrollPanel width="100%" styleName="{style.scrollBox}">
+
+			<g:VerticalPanel width="100%">
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+				<g:Label text="http://google.com" styleName="{style.linkStyle}" />
+
+
+			</g:VerticalPanel>
+
+		</g:ScrollPanel>
+		<g:HTMLPanel>
+			<center>
+				<g:Button stylePrimaryName="{style.authorizeButton}">Authorize</g:Button>
+			</center>
+		</g:HTMLPanel>
+
+	</g:FlowPanel>
+
+</ui:UiBinder> 

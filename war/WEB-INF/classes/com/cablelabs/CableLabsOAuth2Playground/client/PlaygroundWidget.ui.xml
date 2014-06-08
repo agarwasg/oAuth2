@@ -1,0 +1,83 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:cable='urn:import:com.cablelabs.CableLabsOAuth2Playground.client'>
+	<ui:style>
+	.shortcuts {
+		border-left: 1px solid #e5e5e5;
+		border-right: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	
+	.stack-header {
+		cursor: pointer;
+		padding: 8px;
+		background-color: #f1f1f1;
+		font-size: 1.4em;
+		font-weight: bold;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		display: block;
+		overflow: auto;
+	}
+	
+	.stack-content {
+		background-color: #ffffff;
+	}
+	
+	.pretty {
+		background-color: Skyblue;
+	}
+	</ui:style>
+
+	<g:DockLayoutPanel unit='EM'>
+		<g:north size='5'>
+			<g:HTMLPanel>
+				<center>
+					<H1>Cable labs OAuth2 Playground </H1>
+				</center>
+			</g:HTMLPanel>
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel>
+				<g:west size='450' unit='EM'>
+					<g:StackLayoutPanel unit='EM' styleName='{style.shortcuts}'>
+						<g:stack>
+							<g:header size='3'>
+								<div class='{style.stack-header}'>
+									Step 1: Select and Authorize APIs</div>
+							</g:header>
+							<cable:Step1Content ui:field='Step1Content'></cable:Step1Content>
+						</g:stack>
+						<g:stack>
+							<g:header size='3'>
+								<div class='{style.stack-header}'>
+									Step 2: Exchange authorization code for tokens</div>
+							</g:header>
+							<cable:Step2Content ui:field='Step2Content'></cable:Step2Content>
+						</g:stack>
+						<g:stack>
+							<g:header size='3'>
+								<div class='{style.stack-header}'>
+									Step 3: Configure request to API</div>
+							</g:header>
+							<cable:Step3Content ui:field='Step3Content'></cable:Step3Content>
+						</g:stack>
+					</g:StackLayoutPanel>
+				</g:west>
+				<g:north size='20'>
+					<g:FlowPanel>
+						<g:Label text="Request/Response"></g:Label>
+						<g:HTMLPanel>
+							<hr style="width:100%; 
+		color:123123"></hr>
+						</g:HTMLPanel>
+					</g:FlowPanel>
+				</g:north>
+				<g:center>
+					<g:HTML></g:HTML>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+
+</ui:UiBinder>

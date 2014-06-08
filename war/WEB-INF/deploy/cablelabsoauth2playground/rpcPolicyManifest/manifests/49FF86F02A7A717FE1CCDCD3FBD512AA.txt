@@ -1,0 +1,2 @@
+serviceClass: com.cablelabs.CableLabsOAuth2Playground.client.GreetingService
+path: CF014F58B464AD2235AC17FCDADF2464.gwt.rpc

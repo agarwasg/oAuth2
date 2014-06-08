@@ -1,0 +1,80 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style
+		type='com.cablelabs.CableLabsOAuth2Playground.client.Step3Content.Step3Style'>
+		.important {
+			font-weight: bold;
+		}
+		
+		.decoratorPanel {
+			display: block;
+			padding: 6px 18px 6px 7px;
+			background-color: #fAfAfA;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		
+		.textBox {
+			margin-right: 2px;
+			overflow: hidden;
+			width: 90%;
+			padding: 5px 4px;
+			border: 1px solid #ccc;
+			border-top: 1px solid #999;
+		}
+		
+		.authorizeButton {
+			-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+			-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+			box-shadow: 0px 1px 0px 0px #f0f7fa;
+			background-color: #3478ed;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			border: 1px solid #057fd0;
+			display: inline-block;
+			cursor: pointer;
+			color: #ffffff;
+			font-family: arial;
+			font-size: 17px;
+			font-weight: bold;
+			padding: 10px 27px;
+			text-decoration: none;
+			text-shadow: 0px -1px 0px #5b6178;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+		}
+		
+		.authorizeButton:hover {
+			background-color: #019ad2;
+		}
+		
+		.authorizeButton:active {
+			position: relative;
+			top: 1px;
+		}
+		</ui:style>
+
+	<g:FlowPanel>
+
+		<g:DecoratorPanel styleName="{style.decoratorPanel}">
+			<g:HTML>
+				<p>
+					Construct your HTTP request by specifying the URI, HTTP Method,
+					headers, content type and request body.
+					Then click the
+					<b> "Send the request" </b>
+					button to initiate the HTTP Request.
+				</p>
+			</g:HTML>
+
+		</g:DecoratorPanel>
+
+		<g:FlexTable width="100%" ui:field="formFlexTable">
+		</g:FlexTable>
+
+
+	</g:FlowPanel>
+
+</ui:UiBinder> 
