@@ -1,6 +1,8 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
 	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:cable='urn:import:com.cablelabs.CableLabsOAuth2Playground.client'>
+
+	<ui:image field='logo' src='logo.png' />
 	<ui:style>
 	.shortcuts {
 		border-left: 1px solid #e5e5e5;
@@ -20,8 +22,18 @@
 		overflow: auto;
 	}
 	
+	.navBar {
+		background-color: #000;
+	}
+	
 	.stack-content {
 		background-color: #ffffff;
+	}
+	
+	@sprite .logo {
+		gwt-image: 'logo';
+		position: absolute;
+		margin: 10px
 	}
 	
 	.pretty {
@@ -30,11 +42,9 @@
 	</ui:style>
 
 	<g:DockLayoutPanel unit='EM'>
-		<g:north size='5'>
-			<g:HTMLPanel>
-				<center>
-					<H1>Cable labs OAuth2 Playground </H1>
-				</center>
+		<g:north size='5' >
+			<g:HTMLPanel styleName="{style.navBar}">
+				<div class='{style.logo}' />
 			</g:HTMLPanel>
 		</g:north>
 		<g:center>
