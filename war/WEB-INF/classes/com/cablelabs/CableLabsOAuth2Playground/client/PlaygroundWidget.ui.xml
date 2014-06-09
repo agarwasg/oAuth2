@@ -50,7 +50,7 @@
 		<g:center>
 			<g:DockLayoutPanel>
 				<g:west size='450' unit='EM'>
-					<g:StackLayoutPanel unit='EM' styleName='{style.shortcuts}'>
+					<g:StackLayoutPanel unit='EM' styleName='{style.shortcuts}' ui:field="stackPanel">
 						<g:stack>
 							<g:header size='3'>
 								<div class='{style.stack-header}'>

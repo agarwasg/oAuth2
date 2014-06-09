@@ -1,6 +1,8 @@
 package com.cablelabs.CableLabsOAuth2Playground.client;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -33,6 +35,8 @@ public class Step2Content extends Composite {
 
 	public Step2Content() {
 		initWidget(uiBinder.createAndBindUi(this));
+		
+		
 		formFlexTable.setCellSpacing(6);
 		FlexCellFormatter cellFormatter = formFlexTable.getFlexCellFormatter();
 
@@ -43,12 +47,26 @@ public class Step2Content extends Composite {
 
 		// Add some standard form options
 		formFlexTable.setHTML(1, 0, "Authorization Code :");
-		formFlexTable.setWidget(1, 1, new TextBox());
+		TextBox authCodeTextBox = new TextBox();
+		
+		String authCode = com.google.gwt.user.client.Window.Location.getParameter("code");
+		if(authCode!=null && !authCode.isEmpty() ){
+			//user already authorized
+			authCodeTextBox.setText(authCode);
+			
+		}
+		formFlexTable.setWidget(1, 1,authCodeTextBox);
 		Button button = new Button();
 		button.setText("Exchange authorization code for tokens");
-//		button.getElement().addClassName(style.authorizeButton());
 		button.setStyleName(style.authorizeButton());
-//		button.setStylePrimaryName(style.authorizeButton());
+		
+		button.addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				
+			}
+		});
 		cellFormatter.setColSpan(2, 0, 2);
 		formFlexTable.setWidget(2, 0, button);
 

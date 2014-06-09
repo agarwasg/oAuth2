@@ -99,7 +99,7 @@
 		</g:ScrollPanel>
 		<g:HTMLPanel>
 			<center>
-				<g:Button stylePrimaryName="{style.authorizeButton}">Authorize</g:Button>
+				<g:Button stylePrimaryName="{style.authorizeButton}" ui:field="authorizeButton">Authorize</g:Button>
 			</center>
 		</g:HTMLPanel>
 
